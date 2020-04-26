@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SAUHCE | Historias Clínicas</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Underdog|Mansalva|Pacifico|Permanent+Marker&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/vid.css">
+</head>
+
+<body>
+  <div class="homepage-hero-module">
+    <video autoplay loop muted playsinline poster="img/poster.png" src="vid/coverr-hospital-entrance-in-buenos-aires-1587754412187.mp4" class="fillWidth"></video>
+    <div class="content">
+
+      <div id="titulo">
+        ESTÁ LLEGANDO
+      </div>
+      <div id="mensaje">
+        <p>
+          Estamos desarrollando una herramienta para colaborar con el personal médico de Argentina.
+        </p>
+        <p>
+          Para más información, pueden contactarnos en:
+        </p>
+        <p>
+          <a href="mailto:hola@sauhce.com.ar" target="_blank">hola@sauhce.com.ar</a>
+        </p>
+        <hr>
+        <p>
+          Entre todos podemos aportar a la solución.
+        </p>
+        <p>
+          El equipo de <em>S.A.U.H.C.E.</em> .
+        </p>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Fixes unnecessary scrolling in mobile
+    let vh, vw;
+
+    function updateSize() {
+      vh = window.innerHeight * 0.01;
+      vw = window.innerWidth * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+    }
+    window.addEventListener("resize", updateSize)
+    updateSize();
+  </script>
+</body>
+
+</html>
