@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/css.css">
   <script src="js/all.min.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Underdog|Mansalva|Pacifico|Permanent+Marker&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/css.css">
 </head>
 
@@ -28,7 +27,7 @@
     </a>
 
     <div class="collapse navbar-collapse mr-auto" id="navbar">
-      <ul class="navbar-nav  mt-2 mt-lg-0">
+      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
         <li class="nav-item">
           <a class="nav-link" href="#home">HOME</a>
         </li>
@@ -39,7 +38,7 @@
           <a class="nav-link" href="#idea">¿POR QUÉ?</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#nosotros">¿QUIÉNES?</a>
+          <a class="nav-link" href="#nosotros">NOSOTROS</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#contacto">CONTACTO</a>
@@ -49,20 +48,19 @@
   </nav>
 
   <main class="text-center">
-    <section id="home" class="d-flex flex-wrap justify-content-start align-items-center">
+    <section id="home" class="d-flex flex-wrap justify-content-around align-items-center">
+      <h1 class="d-none">SAUHCE</h1>
 
 
       <div id="vistas" class="col-11 col-md-8 d-none d-md-block">
         <div id="vistas-img" class="col-12 "></div>
       </div>
-      <div id="hero-title" class="col-12 col-md-3 d-none d-md-block">
-        <p>HERRAMIENTA DESARROLLADA PARA HACER FRENTE AL COVID-19</p>
-      </div>
-
-      <a id="logo-img" class="col-11 d-block d-md-none" href="#caracteristicas">
-
-
+      <a id="hero-title" class="col-12 col-md-4 d-none d-md-block" href="#caracteristicas">
+        <p>UNA HERRAMIENTA DESARROLLADA PARA HACER FRENTE AL COVID-19</p>
+        <i class="fas fa-chevron-down fa-2x"></i>
       </a>
+
+      <a id="logo-img" class="col-11 d-block d-md-none" href="#caracteristicas"></a>
 
     </section>
 
@@ -125,22 +123,37 @@
       <h2>NUESTRO OBJETIVO</h2>
 
       <article class="d-flex flex-wrap justify-content-around align-items-center">
-        <div class="card mb-3 mb-md-0 col-12 col-md-8 bg-secundario slide-in from-left">
+        <div class="card my-3 col-12 pt-4 bg-secundario slide-in from-left">
           <div class="card-title">
             <h3>PROBLEMA</h3>
           </div>
-          <div class="card-body">
-            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic porro sapiente in voluptate voluptates deleniti amet quis suscipit id repellendus ipsum, ex excepturi quisquam dolorum magnam harum facere doloribus recusandae!
+          <div class="card-body text-left">
+            <p>
+              Ante la situación de crisis sanitaria en la que nos encontramos, los hospitales están abarrotados, a tal punto que varios municipios contratan hoteles para aislar y tratar a pacientes contagiados con COVID-19.<br /> Esto entorpece el proceso
+              de inscripción de pacientes, así como también el de los resultados de las consultas clínicas, dado a que muchas veces esos registros se archivan en papel o en documentos que un empleado administrativo debe compartir manualmente con el médico
+              que esté atendiendo.
             </p>
+            <p class="collapse" id="problemas-mas">
+              Para conseguir estadísticas en tiempo real de cómo se ve afectada la población y qué tratamientos son más efectivos, es indispensable contar con esa información digitalizada.
+              <br /> En este momento hay personal encargado de esa tarea, pero si la información pudiera ser cargada por el mismo médico que trata al paciente, sería un ahorro de tiempo y se evitarían posibles errores de operarios que quizás no están
+              tan instruidos en medicina.
+            </p>
+            <button class="ml-auto btn btn-outline-primary" id="btn-problemas-mas">Leer más...</button>
+
           </div>
         </div>
-        <div class="card col-12 col-md-8 bg-secundario slide-in from-left">
+        <div class="card col-12 py-4 bg-secundario slide-in from-left">
           <div class="card-title">
             <h3>SOLUCION</h3>
           </div>
-          <div class="card-body">
-            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, porro deserunt? Quasi asperiores fugiat cumque, velit ab ducimus earum doloribus facere corrupti veniam est magni pariatur officiis? Possimus, ullam officia!
-            </p>
+          <div class="card-body text-left">
+            <ul>
+              <li class="mb-4">Generar una webapp que se conecte a una Base de Datos centralizada donde el personal médico pueda registrar a los pacientes que atiendan, almacenando su anamnesis, y los resultados de cada consulta médica que realicen (síntomas, tratamiento
+                suministrado y diagnóstico)</li>
+              <li>Permitir a estadistas acceder a datos epidemiológicos en tiempo real de toda la población (casos probables y positivos) que posibilitan tomar las medidas sanitarias más acertadas.
+              </li>
+            </ul>
+
           </div>
         </div>
 
@@ -153,7 +166,8 @@
     </section>
     <section id="contacto">
       <h2>CONTACTO</h2>
-      <p>Para más información puede contactarse con nosotros mediante el siguiente formulario o a la direccion de email</p>
+      <p>Para más información puede contactarse con nosotros mediante el siguiente formulario o a la direccion de email
+      </p>
       <div class="container">
         <div class="row justify-content-around">
           <div class="col-12 col-md-5 py-3 mt-3 border">ACA VA EL FORMULARIO DE CONTACTO SIN BORDE</div>

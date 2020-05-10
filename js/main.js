@@ -46,8 +46,8 @@ const sliders = document.querySelectorAll(".slide-in");
 
 
 const appearOptions = {
-  threshold: .6,
-  rootMargin: "0px 0px -0px 0px"
+  threshold: .0,
+  rootMargin: "0px 0px -50px 0px"
 };
 
 const appearOnScroll = new IntersectionObserver(function(
@@ -73,3 +73,12 @@ faders.forEach(fader => {
 sliders.forEach(slider => {
   appearOnScroll.observe(slider);
 });
+
+const botonLeerMasProblemas = document.querySelector("#btn-problemas-mas");
+const textoLeerMasProblemas = document.querySelector("#problemas-mas");
+botonLeerMasProblemas.addEventListener("click",()=>{
+  botonLeerMasProblemas.innerHTML==="Leer más..." ? botonLeerMasProblemas.innerHTML="Leer menos." : botonLeerMasProblemas.innerHTML="Leer más...";
+
+  textoLeerMasProblemas.classList.toggle("show")
+
+})
