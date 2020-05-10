@@ -1,0 +1,189 @@
+/* GENERAL MOCKUP STYLING */
+
+@font-face {
+  font-family: 'Helvetica Neue LT Std 57 Condensed';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Helvetica Neue LT Std 57 Condensed'), url('../fonts/HelveticaNeueLTStd-LtCn.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Helvetica Neue Bold Condensed';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Helvetica Neue Bold Condensed'), url('../fonts/HelveticaLTStd-BoldCond.otf') format('woff');
+}
+
+:root {
+  --primario: #085C95;
+  --secundario: #BFE5EF;
+  --resaltado: ;
+  --navbar-height: 80px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Helvetica Neue LT Std 57 Condensed", "Sans Serif";
+  color: black;
+}
+
+section {
+  min-height: calc(var(--vh, 1vh) * 100);
+  padding: 30px;
+  padding-top: calc(var(--navbar-height) * 1.25);
+  position: relative;
+}
+
+h1 {
+  font-family: "Helvetica Neue Bold Condensed", "Sans Serif";
+  color: var(--primario);
+}
+
+h2 {
+  font-family: "Helvetica Neue Bold Condensed", "Sans Serif";
+  color: var(--primario);
+  text-decoration: underline;
+}
+
+
+/* ESTILO DE SECCIONES */
+
+#home {
+  background-color: var(--primario);
+  background-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.37));
+  color: aliceblue;
+}
+
+#contacto {
+  background-color: var(--secundario);
+  color: black;
+}
+
+#caracteristicas {}
+
+
+/* ESTILOS DE IMAGENES */
+
+#logo {
+  margin-top: -1rem;
+  max-height: calc(var(--navbar-height) - 32px);
+}
+
+#vistas {
+  position: relative;
+  background-image: radial-gradient(circle, rgb(0, 0, 0) 7%, transparent, transparent);
+}
+
+#vistas-img {
+  display: inline-block;
+  background-image: url("../img/preview.png");
+  height: 70vh;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#logo-img {
+  display: inline-block;
+  background-image: url("../img/logo_vertical.png");
+  height: 70vh;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#registro-paciente {
+  --side: 50vh;
+  height: var(--side);
+  width: var(--side);
+  position: absolute;
+  top: calc(50% + var(--navbar-height));
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -2
+}
+
+#registro-paciente-img {
+  --height: 60vh;
+  height: var(--height);
+  width: calc(var(--height) / 2);
+  position: absolute;
+  top: calc(50% + var(--navbar-height));
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  background-image: url('../img/registro_paciente.png');
+  background-size: cover;
+}
+
+
+/* ESTILO DE CONTENIDO DE SECCIONES */
+
+#caracteristicas-card-group {
+  height: 70vh;
+  margin-top: 15vh;
+}
+
+#caracteristicas-card-group .card-title {
+  color: var(--primario);
+  text-transform: uppercase;
+  font-family: "Helvetica Neue Bold Condensed", "Sans Serif";
+}
+
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 767px) {
+  .active {
+    /* background-color: var(--primario);
+    color: white !important;
+    font-weight: bold; */
+    background-image: linear-gradient(to right, #ffffff, var(--secundario), var(--primario));
+  }
+}
+
+@media only screen and (min-width:768px) {
+  .active {
+    border-bottom: 3px solid var(--primario);
+  }
+}
+
+#hero-title {
+  font-size: 1.3rem;
+}
+
+
+/*Create ripple effec*/
+
+.ripple {
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+.ripple:after {
+  z-index: -10;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, var(--primario) 20%, transparent 10.01%);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transform: scale(8, 8);
+  opacity: 0;
+  transition: transform .5s, opacity 1s;
+  animation: ripple-effect 2.2s ease-in-out infinite;
+}
+
+@keyframes ripple-effect {
+  0% {
+    transform: scale(0, 0);
+    opacity: .5;
+  }
+}
