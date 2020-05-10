@@ -14,26 +14,26 @@
   <link rel="stylesheet" href="css/css.css">
 </head>
 
-<body data-spy="scroll" data-target="#navbar" data-offset="92">
+<body data-spy="scroll" data-target="#navbar" data-offset="102">
 
   <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
-  </button>
+    </button>
+
     <a class="navbar-brand d-flex align-items-center justify-content-around" href="#">
       <img id="logo" src="img/arbol.png" alt="Logo SAUHCE">
       <h1 class="d-inline"> | S.A.U.H.C.E.</h1>
       <small class="d-none d-xl-inline"> Sistema Argentino Unificado de Historias Clínicas Electrónicas</small>
     </a>
 
-
-    <div class="collapse navbar-collapse" id="navbar">
-      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+    <div class="collapse navbar-collapse mr-auto" id="navbar">
+      <ul class="navbar-nav  mt-2 mt-lg-0">
         <li class="nav-item">
           <a class="nav-link" href="#home">HOME</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#caracteristicas">¿QUÉ?</a>
+          <a class="nav-link" href="#caracteristicas">APLICACION</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#idea">¿POR QUÉ?</a>
@@ -47,6 +47,7 @@
       </ul>
     </div>
   </nav>
+
   <main class="text-center">
     <section id="home" class="d-flex flex-wrap justify-content-start align-items-center">
 
@@ -58,7 +59,10 @@
         <p>HERRAMIENTA DESARROLLADA PARA HACER FRENTE AL COVID-19</p>
       </div>
 
-      <div id="logo-img" class="col-11 d-block d-md-none"></div>
+      <a id="logo-img" class="col-11 d-block d-md-none" href="#caracteristicas">
+
+
+      </a>
 
     </section>
 
@@ -66,19 +70,19 @@
     <section id="caracteristicas">
       <h2>CARACTERÍSTICAS</h2>
 
-      <div id="registro-paciente" class="ripple"></div>
+      <div id="registro-paciente" class="ripple fade-in"></div>
       <div id="registro-paciente-img"></div>
 
 
       <div id="caracteristicas-card-group" class="d-none d-md-flex container flex-column justify-content-around ">
         <div class="row justify-content-between">
-          <div class="card border-primary mb-3 col-4">
+          <div class="card border-primary mb-3 col-4 fade-in">
             <div class="card-body">
               <h4 class="card-title">SEGURIDAD DE DATOS</h4>
               <p class="card-text">Todos los datos registrados de los pacientes, historias clínicas y anamnesis, se encuentran asegurados y sólo el personal autorizado es capaz de acceder a ellos.</p>
             </div>
           </div>
-          <div class="card border-primary mb-3 col-4">
+          <div class="card border-primary mb-3 col-4 fade-in">
             <div class="card-body">
               <h4 class="card-title">intuitivo</h4>
               <p class="card-text">Nos pusimos en contacto con personal médico para adaptar la aplicación a sus necesidades y así facilitar su implementación.</p>
@@ -86,13 +90,13 @@
           </div>
         </div>
         <div class="row justify-content-between">
-          <div class="card border-primary mb-3 col-4">
+          <div class="card border-primary mb-3 col-4 fade-in">
             <div class="card-body">
               <h4 class="card-title">código limpio</h4>
               <p class="card-text">SAUHCE fue desarrollado por profesionales, siguiendo normas de desarrollo para lograr un código limpio facilitando así su lectura y comprensión para cualquier colaborador que desee aportar al proyecto.</p>
             </div>
           </div>
-          <div class="card border-primary mb-3 col-4">
+          <div class="card border-primary mb-3 col-4 fade-in">
             <div class="card-body">
               <h4 class="card-title">responsive</h4>
               <p class="card-text">Dado que se planteó para ser utilizada en la primera línea de atención epidemiológica, la aplicación fue diseñada y adaptada para su perfecta utilización en todos los dispositivos (laptops, tablets, PC de escritorio, smartphones).</p>
@@ -100,13 +104,13 @@
           </div>
         </div>
         <div class="row justify-content-between">
-          <div class="card border-primary mb-3 col-4">
+          <div class="card border-primary mb-3 col-4 fade-in">
             <div class="card-body">
               <h4 class="card-title">app médica</h4>
               <p class="card-text">Creada especialmente para mayor comodidad de utilización por parte de nuestro personal de salud, permitiendo explorar en detalle los datos médicos.</p>
             </div>
           </div>
-          <div class="card border-primary mb-3 col-4">
+          <div class="card border-primary mb-3 col-4 fade-in">
             <div class="card-body">
               <h4 class="card-title">gran potencial</h4>
               <p class="card-text">Si bien este proyecto inició como una herramienta para registrar y entender cómo afecta la pandemia del COVID-19 a nuestra población, SAUHCE es un sistema muy versátil, pudiendo ser utilizado .</p>
@@ -120,23 +124,27 @@
     <section id="idea">
       <h2>NUESTRO OBJETIVO</h2>
 
-      <div class="border">
-        <div class="card">
-          <div class="card-title">PROBLEMA</div>
+      <article class="d-flex flex-wrap justify-content-around align-items-center">
+        <div class="card mb-3 mb-md-0 col-12 col-md-8 bg-secundario slide-in from-left">
+          <div class="card-title">
+            <h3>PROBLEMA</h3>
+          </div>
           <div class="card-body">
             <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic porro sapiente in voluptate voluptates deleniti amet quis suscipit id repellendus ipsum, ex excepturi quisquam dolorum magnam harum facere doloribus recusandae!
             </p>
           </div>
         </div>
-        <div class="card">
-          <div class="card-title">SOLUCION</div>
+        <div class="card col-12 col-md-8 bg-secundario slide-in from-left">
+          <div class="card-title">
+            <h3>SOLUCION</h3>
+          </div>
           <div class="card-body">
             <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, porro deserunt? Quasi asperiores fugiat cumque, velit ab ducimus earum doloribus facere corrupti veniam est magni pariatur officiis? Possimus, ullam officia!
             </p>
           </div>
         </div>
 
-      </div>
+      </article>
 
     </section>
     <section id="nosotros">
@@ -145,6 +153,7 @@
     </section>
     <section id="contacto">
       <h2>CONTACTO</h2>
+      <p>Para más información puede contactarse con nosotros mediante el siguiente formulario o a la direccion de email</p>
       <div class="container">
         <div class="row justify-content-around">
           <div class="col-12 col-md-5 py-3 mt-3 border">ACA VA EL FORMULARIO DE CONTACTO SIN BORDE</div>
@@ -169,7 +178,7 @@
     <span> &copy; 2020 | S.A.U.H.C.E. </span>
   </footer>
 
-
+  <div id="toTop" class="toTop hideTopper"><a href="#"><i class="fa fa-arrow-circle-up"></i></a></div>
 
 
   <script src="js/jquery-3.3.1.slim.min.js"></script>

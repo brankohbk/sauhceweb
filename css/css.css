@@ -24,7 +24,9 @@
 
 body {
   font-family: "Helvetica Neue LT Std 57 Condensed", "Sans Serif";
+  font-size: large;
   color: black;
+  overflow-x: hidden;
 }
 
 section {
@@ -43,6 +45,11 @@ h2 {
   font-family: "Helvetica Neue Bold Condensed", "Sans Serif";
   color: var(--primario);
   text-decoration: underline;
+}
+
+.bg-secundario {
+  background-color: var(--secundario);
+  color: var(--primario)
 }
 
 
@@ -120,14 +127,54 @@ h2 {
 /* ESTILO DE CONTENIDO DE SECCIONES */
 
 #caracteristicas-card-group {
-  height: 70vh;
+  min-height: 70vh;
   margin-top: 15vh;
 }
 
-#caracteristicas-card-group .card-title {
+.card-title {
   color: var(--primario);
   text-transform: uppercase;
   font-family: "Helvetica Neue Bold Condensed", "Sans Serif";
+}
+
+#idea article {
+  min-height: 70vh;
+}
+
+
+/* ESTILOS DE TOPPER (TO THE TOP) */
+
+.toTop {
+  font-size: 3.5em;
+  position: fixed;
+  bottom: 15px;
+  transition: 0.75s all;
+}
+
+.toTop a,
+.toTop a:active,
+.toTop a:visited {
+  color: rgba(3, 138, 205, 0.603);
+}
+
+.toTop-hover {
+  font-size: 4.5em;
+}
+
+.toTop-hover a {
+  color: #0389CD;
+}
+
+.hideTopper {
+  font-size: 3.5em;
+  color: rgba(3, 138, 205, 0.603);
+  opacity: 0;
+  right: -100%;
+}
+
+.showTopper {
+  opacity: 1;
+  right: 3vw;
 }
 
 
@@ -175,15 +222,51 @@ h2 {
   background-image: radial-gradient(circle, var(--primario) 20%, transparent 10.01%);
   background-repeat: no-repeat;
   background-position: 50%;
-  transform: scale(8, 8);
-  opacity: 0;
-  transition: transform .5s, opacity 1s;
-  animation: ripple-effect 2.2s ease-in-out infinite;
 }
 
-@keyframes ripple-effect {
-  0% {
-    transform: scale(0, 0);
-    opacity: .5;
-  }
+.ripple.fade-in:after {
+  opacity: 0;
+  transform: scale(0, 0);
+  transition: transform 2.2s, opacity 3.12s;
+}
+
+.ripple.fade-in.appear:after {
+  transform: scale(8, 8);
+  opacity: .6;
+}
+
+.card.fade-in {
+  opacity: 0;
+  transform: translateY(50%);
+  transition: transform 2.2s, opacity 1.12s;
+}
+
+.card.fade-in.appear {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.from-left {
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.from-right {
+  -webkit-transform: translateX(50%);
+  transform: translateX(50%);
+}
+
+.from-left,
+.from-right {
+  transition: opacity 250ms ease-in, -webkit-transform 400ms ease-in;
+  transition: opacity 250ms ease-in, transform 400ms ease-in;
+  transition: opacity 250ms ease-in, transform 400ms ease-in, -webkit-transform 400ms ease-in;
+  opacity: 0;
+}
+
+.from-left.appear,
+.from-right.appear {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  opacity: 1;
 }
