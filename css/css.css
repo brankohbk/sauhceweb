@@ -272,3 +272,7 @@ h2 {
   transform: translateX(0);
   opacity: 1;
 }
+
+.perfil {
+  height: 300px;
+}
