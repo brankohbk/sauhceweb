@@ -140,8 +140,61 @@ h2 {
 #idea article {
   min-height: 70vh;
 }
+#nosotros h3 {
+  font-family: "Helvetica Neue Bold Condensed", "Sans Serif";
+  color: var(--primario);
+  margin: 0;
+}
+.perfil {
+  height: 25vw;
+}
+.perfil img{
+  width: 15vw;
+  height: 15vw;
+  margin:0;
+  border-radius: 50em;
+}
+.perfil p{
+  font-family: "Helvetica Neue Bold Condensed", "Sans Serif";
+  color: var(--primario);
+  font-style: italic;
+  margin: 0;
+}
+.perfil h4{
+  font-family: "Helvetica Neue Bold Condensed", "Sans Serif";
+  color: var(--primario);
+  margin: 0;
+}
+.perfil2 p{
+  font-family: "Helvetica Neue Bold Condensed", "Sans Serif";
+  color: var(--primario);
+  font-style: italic;
+  margin: 0;
+}
+.perfil2 h4{
+  font-family: "Helvetica Neue Bold Condensed", "Sans Serif";
+  color: var(--primario);
+  margin: 0;
+}
+.perfil2{
+  height: 20vh;
+}
+.perfil2 img{
+  border-radius: 30em;
+  width: 20vw;
+  height: 20vw;
+}
 
-
+#linkedin {
+  border-radius: 1em;
+  width: 10vw;
+  height: 10vw;
+}
+#linkedin2{
+  border-radius: 30em;
+  width: 2vw;
+  height: 2vw;
+}
 /* ESTILOS DE TOPPER (TO THE TOP) */
 
 .toTop {
