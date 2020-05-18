@@ -74,11 +74,23 @@ sliders.forEach(slider => {
   appearOnScroll.observe(slider);
 });
 
+// ===============================
+// BOTON LEER MAS
+
 const botonLeerMasProblemas = document.querySelector("#btn-problemas-mas");
 const textoLeerMasProblemas = document.querySelector("#problemas-mas");
-botonLeerMasProblemas.addEventListener("click",()=>{
+botonLeerMasProblemas?.addEventListener("click",()=>{
   botonLeerMasProblemas.innerHTML==="Leer más..." ? botonLeerMasProblemas.innerHTML="Leer menos." : botonLeerMasProblemas.innerHTML="Leer más...";
-
   textoLeerMasProblemas.classList.toggle("show")
-
 })
+
+// ===============================
+// CONFIRMAR ACCIONES DEL FORMULARIO
+
+function confirmReset() {
+  return confirm("Está por limpiar los datos del formulario ¿Es correcto?");
+}
+
+function confirmSend() {
+  return confirm("¿Confirma el envío del formulario?");
+}
