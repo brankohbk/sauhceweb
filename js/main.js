@@ -46,7 +46,7 @@ const sliders = document.querySelectorAll(".slide-in");
 
 
 const appearOptions = {
-  threshold: .0,
+  threshold: .10,
   rootMargin: "0px 0px -50px 0px"
 };
 
@@ -74,15 +74,7 @@ sliders.forEach(slider => {
   appearOnScroll.observe(slider);
 });
 
-// ===============================
-// BOTON LEER MAS
 
-const botonLeerMasProblemas = document.querySelector("#btn-problemas-mas");
-const textoLeerMasProblemas = document.querySelector("#problemas-mas");
-botonLeerMasProblemas?.addEventListener("click",()=>{
-  botonLeerMasProblemas.innerHTML==="Leer más..." ? botonLeerMasProblemas.innerHTML="Leer menos." : botonLeerMasProblemas.innerHTML="Leer más...";
-  textoLeerMasProblemas.classList.toggle("show")
-})
 
 // ===============================
 // CONFIRMAR ACCIONES DEL FORMULARIO
@@ -94,3 +86,4 @@ function confirmReset() {
 function confirmSend() {
   return confirm("¿Confirma el envío del formulario?");
 }
+

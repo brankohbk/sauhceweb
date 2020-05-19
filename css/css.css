@@ -239,7 +239,7 @@ h2 {
 /* ESTILOS DE TOPPER (TO THE TOP) */
 
 .toTop {
-  font-size: 3.5em;
+  font-size: 3em;
   position: fixed;
   bottom: 15px;
   transition: 0.75s all;
@@ -252,7 +252,7 @@ h2 {
 }
 
 .toTop-hover {
-  font-size: 4.5em;
+  font-size: 3.5em;
 }
 
 .toTop-hover a {
@@ -260,7 +260,7 @@ h2 {
 }
 
 .hideTopper {
-  font-size: 3.5em;
+  font-size: 2.5em;
   color: rgba(3, 138, 205, 0.603);
   opacity: 0;
   right: -100%;
@@ -389,7 +389,7 @@ textarea {
 .from-right {
   transition: opacity 250ms ease-in, -webkit-transform 400ms ease-in;
   transition: opacity 250ms ease-in, transform 400ms ease-in;
-  transition: opacity 250ms ease-in, transform 400ms ease-in, -webkit-transform 400ms ease-in;
+  transition: opacity 350ms ease-in, transform 400ms ease-in, -webkit-transform 400ms ease-in;
   opacity: 0;
 }
 
@@ -400,6 +400,7 @@ textarea {
   opacity: 1;
 }
 
-.perfil {
-  height: 300px;
+.from-right.appear {
+  transition-delay: .64s;
+  /* transition-timing-function: cubic-bezier(.37, 1.84, .78, 1.02); */
 }
