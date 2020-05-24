@@ -14,6 +14,13 @@
   src: local('Helvetica Neue Bold Condensed'), url('../fonts/HelveticaLTStd-BoldCond.otf') format('woff');
 }
 
+@font-face {
+  font-family: 'Roboto Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Roboto Regular'), url('../fonts/Roboto-Regular.ttf') format('woff');
+}
+
 :root {
   --primario: #085C95;
   --secundario: #BFE5EF;
@@ -123,6 +130,10 @@ h2 {
   background-size: cover;
 }
 
+.idea-icon {
+  max-width: 5vw;
+}
+
 
 /* ESTILO DE CONTENIDO DE SECCIONES */
 
@@ -139,6 +150,8 @@ h2 {
 
 #caracteristicas-card-group {
   min-height: 80vh;
+  font-family: "Roboto Regular", "Sans Serif";
+  font-size: medium;
 }
 
 #caracteristicas-card-group .card {
