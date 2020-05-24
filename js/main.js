@@ -43,11 +43,16 @@ $(document).ready(function () {
 
 const faders = document.querySelectorAll(".fade-in");
 const sliders = document.querySelectorAll(".slide-in");
-
+const qrSection = document.querySelector("#qr-section");
 
 const appearOptions = {
   threshold: .10,
   rootMargin: "0px 0px -50px 0px"
+};
+
+const glowOptions = {
+  threshold: .90,
+  rootMargin: "-50px 0px 0px 0px"
 };
 
 const appearOnScroll = new IntersectionObserver(function(
@@ -66,6 +71,22 @@ const appearOnScroll = new IntersectionObserver(function(
 },
 appearOptions);
 
+const glowOnScroll = new IntersectionObserver(function(
+  entries,
+  glowOnScroll
+) {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) {
+      entry.target.classList.remove("glow");
+      return;
+    } else {
+      entry.target.classList.add("glow");
+      glowOnScroll.unobserve(entry.target);
+    }
+  });
+},
+glowOptions);
+
 faders.forEach(fader => {
   appearOnScroll.observe(fader);
 });
@@ -73,6 +94,8 @@ faders.forEach(fader => {
 sliders.forEach(slider => {
   appearOnScroll.observe(slider);
 });
+
+// glowOnScroll.observe(qrSection);
 
 
 
