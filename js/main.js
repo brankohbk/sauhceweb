@@ -13,17 +13,66 @@ updateSize();
 
 // ===============================
 // MUESTRA UN "TO THE TOP" AL SCROLLEAR.
-let topper = document.getElementById("toTop");
+let microNav = document.getElementById("microNav");
 
-const toggleTopperHover=()=>{topper.classList.toggle("toTop-hover")};
+const toggleMicroNavHover=(element)=>{element.classList.toggle("microNav-hover")};
 
-const toggleTopper = function () {
- window.scrollY >= 222 ? topper.className = "toTop showTopper" : topper.className = "toTop hideTopper"  ;
+const toggleMicroNav = function () {
+  window.scrollY >= 222 ? microNav.className = "microNav showMicroNav" : microNav.className = "microNav hideMicroNav"  ;
 };
 
-topper.addEventListener("mouseenter",toggleTopperHover);
-topper.addEventListener('mouseleave',toggleTopperHover);
-window.addEventListener("scroll", toggleTopper);
+microNav.childNodes.forEach(child => {
+  child.addEventListener("mouseenter",(e)=>toggleMicroNavHover(e.target));
+  child.addEventListener('mouseleave',(e)=>toggleMicroNavHover(e.target));
+})
+
+window.addEventListener("scroll", toggleMicroNav);
+
+
+// ===============================
+// AVERIGUA QUÉ section SE ESTÁ MOSTRANDO.
+
+let active="home";
+const sections = document.querySelectorAll("section");
+let sectionNames=[];
+
+const isActiveOptions = {
+  threshold: .10,
+  rootMargin: "0px 0px 0px 0px"
+};
+const isActive = new IntersectionObserver(function(
+  entries,
+  isActive
+) {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) {
+      return;
+    } else {
+      active= entry.target.id;
+    }
+  });
+},
+isActiveOptions);
+
+ sections.forEach(section => {
+   isActive.observe(section);
+   sectionNames.push(section.id)  
+  });
+
+// ===============================
+// MINI NAVEGADOR
+
+function nextSection(){
+  if(sectionNames.indexOf(active) + 1 < sectionNames.length){window.location.hash=`#${sectionNames[sectionNames.indexOf(active) + 1]}` }
+}
+
+function prevSection(){
+  if(sectionNames.indexOf(active) - 1 >= 0 ){ window.location.hash=`#${sectionNames[sectionNames.indexOf(active) - 1]}` }
+}
+
+ 
+
+
 
 // ===============================
 // CERRAR EL NAVBAR AL TOCAR AFUERA DEL MENU
@@ -51,9 +100,11 @@ const appearOptions = {
 };
 
 const glowOptions = {
-  threshold: .90,
-  rootMargin: "-50px 0px 0px 0px"
+  threshold: .30,
+  rootMargin: "0px 0px 0px 0px"
 };
+
+
 
 const appearOnScroll = new IntersectionObserver(function(
   entries,
@@ -95,7 +146,7 @@ sliders.forEach(slider => {
   appearOnScroll.observe(slider);
 });
 
-// glowOnScroll.observe(qrSection);
+glowOnScroll.observe(qrSection);
 
 
 

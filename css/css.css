@@ -59,6 +59,11 @@ h2 {
   color: var(--primario)
 }
 
+.border-none {
+  box-shadow: none;
+  border: none;
+}
+
 
 /* ESTILO DE SECCIONES */
 
@@ -109,8 +114,7 @@ h2 {
   height: var(--side);
   width: var(--side);
   position: absolute;
-  top: 50%;
-  top: calc(50% + var(--navbar-height));
+  top: calc(50vh + var(--navbar-height));
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: -2
@@ -121,17 +125,12 @@ h2 {
   height: var(--height);
   width: calc(var(--height) / 2);
   position: absolute;
-  top: 50%;
-  top: calc(50% + var(--navbar-height));
+  top: calc(50vh + var(--navbar-height));
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: -1;
   background-image: url('../img/registro_paciente.png');
   background-size: cover;
-}
-
-.idea-icon {
-  max-width: 5vw;
 }
 
 
@@ -175,17 +174,17 @@ h2 {
   height: 77vh;
 }
 
-.carousel-item:nth-child(1) {
+.carousel-item:nth-child(n) {
   background: url("../img/carousel/1.jpg") no-repeat center;
   background-size: cover;
 }
 
-.carousel-item:nth-child(2) {
+.carousel-item:nth-child(2n) {
   background: url("../img/carousel/2.jpg") no-repeat center;
   background-size: cover;
 }
 
-.carousel-item:nth-child(3) {
+.carousel-item:nth-child(3n) {
   background: url("../img/carousel/3.jpg") no-repeat center;
   background-size: cover;
 }
@@ -195,10 +194,11 @@ h2 {
 }
 
 .carousel-indicators li {
-  height: 15px;
+  transition: all 0.6s ease-in-out;
 }
 
 .carousel-indicators .active {
+  height: 15px;
   background-color: var(--primario);
 }
 
@@ -209,7 +209,13 @@ h2 {
 }
 
 #idea article {
-  min-height: 70vh;
+  position: relative;
+  min-height: 60vh;
+  font-size: larger;
+}
+
+#idea h3 {
+  font-size: 1.625rem;
 }
 
 #nosotros h3 {
@@ -298,37 +304,40 @@ h2 {
 }
 
 
-/* ESTILOS DE TOPPER (TO THE TOP) */
+/* ESTILOS DE MicroNav (TO THE TOP) */
 
-.toTop {
-  font-size: 3em;
+.microNav {
+  font-size: 2.5em;
   position: fixed;
   bottom: 15px;
-  transition: 0.75s all;
+  right: 1vw;
+  width: 1em;
+  transition: 0.755s all;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* border: 1px solid black; */
 }
 
-.toTop a,
-.toTop a:active,
-.toTop a:visited {
+.microNav * {
   color: rgba(3, 138, 205, 0.603);
+  transition: 0.15s all;
+  /* border: 1px solid black; */
 }
 
-.toTop-hover {
-  font-size: 3.5em;
-}
-
-.toTop-hover a {
+.microNav-hover * {
+  font-size: 1.15em;
   color: #0389CD;
 }
 
-.hideTopper {
+.hideMicroNav {
   font-size: 2.5em;
   color: rgba(3, 138, 205, 0.603);
   opacity: 0;
   right: -100%;
 }
 
-.showTopper {
+.showMicroNav {
   opacity: 1;
   right: 3vw;
 }
@@ -469,9 +478,9 @@ textarea {
 }
 
 .glow {
-  -webkit-animation: glow 1s 0.7s ease-in-out infinite alternate;
-  -moz-animation: glow 1s 0.7s ease-in-out infinite alternate;
-  animation: glow 1s 0.7s ease-in-out infinite alternate;
+  -webkit-animation: glow ease-out 1.3s 3 alternate;
+  -moz-animation: glow ease-out 1.3s 3 alternate;
+  animation: glow ease-out 1.3s 3 alternate;
 }
 
 @-webkit-keyframes glow {
