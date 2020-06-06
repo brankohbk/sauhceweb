@@ -162,11 +162,18 @@ function confirmSend() {
 }
 
 // ===============================
-// CONFIRMAR ACCIONES DEL FORMULARIO
+// SMOOTH SCROLL
 
 document.querySelectorAll(".toHome").forEach( element => {
   element.addEventListener("click",e=>{
     e.preventDefault;
     document.querySelector("#home").scrollIntoView({ behavior: "smooth"})
+  })
+})
+
+document.querySelectorAll(".toCaracteristicas").forEach( element => {
+  element.addEventListener("click",e=>{
+    e.preventDefault;
+    document.querySelector("#caracteristicas").scrollIntoView({ behavior: "smooth"})
   })
 })
