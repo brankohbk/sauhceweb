@@ -20,38 +20,38 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <span class="navbar-brand d-flex align-items-center justify-content-around toHome" href="#">
+    <a href="#home" class="toHome navbar-brand d-flex align-items-center justify-content-around toHome">
       <img id="logo" src="img/arbol.png" alt="Logo SAUHCE">
       <h1 class="d-inline"> | S.A.U.H.C.E.</h1>
       <small class="d-none d-xl-inline ml-2"> Sistema Argentino Unificado de Historias Clínicas Electrónicas</small>
-    </span>
+    </a>
 
     <div class="collapse navbar-collapse mr-auto" id="navbar">
       <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
         <li class="nav-item">
-          <!-- <a class="nav-link toHome" href="#">HOME</a> -->
-          <span class="nav-link toHome" href="#">HOME</span>
+          <a class="toHome nav-link" href="#home">HOME</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link toCaracterísticas" href="#caracteristicas">APLICACION</a>
+          <a class="toCaracteristicas nav-link" href="#caracteristicas">APLICACION</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link toIdea" href="#idea">¿POR QUÉ?</a>
+          <a id="toIdea" class="nav-link" href="#idea">¿POR QUÉ?</a>
         </li>
-        <li class="nav-item toNosotros">
-          <a class="nav-link" href="#nosotros">NOSOTROS</a>
+        <li class="nav-item">
+          <a id="toNosotros" class="nav-link" href="#nosotros">NOSOTROS</a>
         </li>
-        <li class="nav-item toContacto">
-          <a class="nav-link" href="#contacto">CONTACTO</a>
+        <li class="nav-item">
+          <a id="toContacto" class="nav-link" href="#contacto">CONTACTO</a>
         </li>
       </ul>
     </div>
+
   </nav>
 
   <main class="text-center">
     <section id="home">
       <h1 class="d-none">SAUHCE</h1>
-      <span class="d-flex flex-wrap justify-content-around align-items-center toCaracteristicas">
+      <div class="toCaracteristicas d-flex flex-wrap justify-content-around align-items-center">
 
         <div id="vistas" class="col-11 col-md-8 d-none d-md-block">
           <div id="vistas-img" class="col-12 "></div>
@@ -62,7 +62,7 @@
 
         <div id="logo-img" class="col-12 d-block d-md-none"></div>
         <i class="fas fa-chevron-down fa-2x"></i>
-      </span>
+      </div>
 
     </section>
     <section id="caracteristicas">
@@ -551,8 +551,8 @@
 
   <script src="js/jquery-3.3.1.slim.min.js"></script>
   <script src="js/popper.min.js"></script>
+  <!-- <script src="js/smoothscroll.js"></script> -->
   <script src="js/bootstrap.min.js"></script>
-  <script src="js/smoothscroll.js"></script>
   <script src=" js/main.js "></script>
 </body>
 

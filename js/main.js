@@ -164,16 +164,24 @@ function confirmSend() {
 // ===============================
 // SMOOTH SCROLL
 
-document.querySelectorAll(".toHome").forEach( element => {
-  element.addEventListener("click",e=>{
-    e.preventDefault;
-    document.querySelector("#home").scrollIntoView({ behavior: "smooth"})
-  })
-})
 
-document.querySelectorAll(".toCaracteristicas").forEach( element => {
-  element.addEventListener("click",e=>{
-    e.preventDefault;
-    document.querySelector("#caracteristicas").scrollIntoView({ behavior: "smooth"})
-  })
-})
+document.querySelectorAll(".toHome").forEach(elemento => elemento.addEventListener('click', function(e) {
+  e.preventDefault();
+  document.getElementById('home').scrollIntoView({ behavior: 'smooth' });})
+  ) ;
+document.querySelectorAll(".toCaracteristicas").forEach(elemento => elemento.addEventListener('click', function(e) {
+  e.preventDefault();
+  document.getElementById('caracteristicas').scrollIntoView({ behavior: 'smooth' });})
+  ) ;
+document.getElementById('toIdea').addEventListener('click', function(e) {
+  e.preventDefault();
+  document.getElementById('idea').scrollIntoView({ behavior: 'smooth' });
+});
+document.getElementById('toNosotros').addEventListener('click', function(e) {
+  e.preventDefault();
+  document.getElementById('nosotros').scrollIntoView({ behavior: 'smooth' });
+});
+document.getElementById('toContacto').addEventListener('click', function(e) {
+  e.preventDefault();
+  document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' });
+});
