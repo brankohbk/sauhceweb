@@ -161,3 +161,12 @@ function confirmSend() {
   return confirm("¿Confirma el envío del formulario?");
 }
 
+// ===============================
+// CONFIRMAR ACCIONES DEL FORMULARIO
+
+document.querySelectorAll(".toHome").forEach( element => {
+  element.addEventListener("click",e=>{
+    e.preventDefault;
+    document.querySelector("#home").scrollIntoView({ behavior: "smooth"})
+  })
+})

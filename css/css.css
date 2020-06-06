@@ -26,7 +26,7 @@
   --secundario: #BFE5EF;
   --resaltado: ;
   --navbar-height: 80px;
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
 }
 
 body {

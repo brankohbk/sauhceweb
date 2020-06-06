@@ -20,27 +20,28 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <a class="navbar-brand d-flex align-items-center justify-content-around" href="#">
+    <span class="navbar-brand d-flex align-items-center justify-content-around toHome" href="#">
       <img id="logo" src="img/arbol.png" alt="Logo SAUHCE">
       <h1 class="d-inline"> | S.A.U.H.C.E.</h1>
       <small class="d-none d-xl-inline ml-2"> Sistema Argentino Unificado de Historias Clínicas Electrónicas</small>
-    </a>
+    </span>
 
     <div class="collapse navbar-collapse mr-auto" id="navbar">
       <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="#home">HOME</a>
+          <!-- <a class="nav-link toHome" href="#">HOME</a> -->
+          <span class="nav-link toHome" href="#">HOME</span>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#caracteristicas">APLICACION</a>
+          <a class="nav-link toCaracterísticas" href="#caracteristicas">APLICACION</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#idea">¿POR QUÉ?</a>
+          <a class="nav-link toIdea" href="#idea">¿POR QUÉ?</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item toNosotros">
           <a class="nav-link" href="#nosotros">NOSOTROS</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item toContacto">
           <a class="nav-link" href="#contacto">CONTACTO</a>
         </li>
       </ul>
@@ -532,7 +533,7 @@
   </footer>
 
   <div id="microNav" class="microNav hideMicroNav">
-    <a href="#"><i class="fa fa-arrow-circle-up"></i></a>
+    <a class="toHome" href="#"><i class="fa fa-arrow-circle-up"></i></a>
     <!-- <a href="#"><i class="fas fa-home"></i></a> -->
     <!-- <a href="javascript:prevSection()"><i class="fa fa-arrow-circle-up"></i></a> -->
     <!-- <a href="javascript:nextSection()"><i class="fa fa-arrow-circle-down"></i></a> -->
@@ -551,7 +552,8 @@
   <script src="js/jquery-3.3.1.slim.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/smoothscroll.js"></script>
+  <script src=" js/main.js "></script>
 </body>
 
 </html>
