@@ -164,7 +164,7 @@ function confirmSend() {
 // ===============================
 // SMOOTH SCROLL
 
-
+window.addEventListener('load', function() {
 document.querySelectorAll(".toHome").forEach(elemento => elemento.addEventListener('click', function(e) {
   e.preventDefault();
   document.getElementById('home').scrollIntoView({ behavior: 'smooth' });})
@@ -185,3 +185,4 @@ document.getElementById('toContacto').addEventListener('click', function(e) {
   e.preventDefault();
   document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' });
 });
+})
