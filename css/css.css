@@ -54,6 +54,11 @@ h2 {
   text-decoration: underline;
 }
 
+.bg-primario {
+  background-color: var(--primario);
+  color: var(--secundario)
+}
+
 .bg-secundario {
   background-color: var(--secundario);
   color: var(--primario)
@@ -63,6 +68,18 @@ h2 {
   box-shadow: none;
   border: none;
 }
+
+
+/* ESTILO DE NAV SCROLLED */
+
+
+/* nav.scrolled {
+  background-color: var(--primario) !important;
+}
+
+nav.scrolled * {
+  color: aliceblue !important;
+} */
 
 
 /* ESTILO DE SECCIONES */
